@@ -6,7 +6,9 @@ package main
 
 import (
 	"fmt"
+	"time"
 
+	"github.com/medina325/go/goroutines"
 	"github.com/medina325/go/utils"
 )
 
@@ -31,7 +33,8 @@ func main() {
 3 - run server
 4 - run counter threads
 5 - run load balancing worker threads
-	`)
+6 - run goroutine timeout example
+`)
 	_, err := fmt.Scan(&option)
 
 	if err != nil {
@@ -53,5 +56,8 @@ func main() {
 		utils.Counter()
 	case 5:
 		utils.SimulateWorkers()
+	case 6:
+		timeout := 3 * time.Second
+		goroutines.Timeout(timeout)
 	}
 }
