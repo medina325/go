@@ -134,3 +134,6 @@ func main() {
     go counter() // thread 2
 }
 ```
+
+## Misc
+- [Sobre timeouts](#https://go.dev/blog/concurrency-timeouts)
